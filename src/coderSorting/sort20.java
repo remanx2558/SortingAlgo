@@ -10,6 +10,7 @@ public class sort20 {
 
     public static void main(String args[])throws IOException {
         BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+        Scanner s=new Scanner(System.in);
         int t=Integer.parseInt(br.readLine());
         for(int p=0;p<t;p++){
             String str[]=br.readLine().split(" ");
@@ -17,6 +18,8 @@ public class sort20 {
             String str1[]=br.readLine().split(" ");
 
             int arr1[]=new int[str1.length];
+            String comment=s.next();
+            ///order of sorting
 
             for(int i=0;i<str1.length;i++){
                 arr1[i]=Integer.parseInt(str1[i]);
