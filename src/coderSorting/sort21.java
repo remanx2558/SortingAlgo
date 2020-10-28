@@ -9,12 +9,14 @@ import java.util.Comparator;
 public class sort21 {
     public static void main(String args[])throws IOException {
         BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+        Scanner s=new Scanner(System.in);
         int t=Integer.parseInt(br.readLine());
         for(int p=0;p<t;p++){
             /////////////////////////////
 
             String str1[]=br.readLine().split(" ");
             String str2[]=br.readLine().split(" ");
+            String comment=s.next();
             ////////////////////////////
 
             ///////////////////////////
@@ -38,7 +40,7 @@ public class sort21 {
         int index;
         elements(long v,int i){
             val=v;
-            index=i;
+            index=i+1;
         }   }
 static long k;
     static class mycompare implements Comparator<elements>{
@@ -55,7 +57,7 @@ static long k;
             else if(e1.index<e2.index){
                 return -1;
             }
-            else return 1;
+            else return 0;
         }
     }
   static   void mukesh(elements [] arr){
