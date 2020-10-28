@@ -11,6 +11,7 @@ import java.util.HashMap;
 public class sort17 {
     public static void main(String args[])throws IOException {
         BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+        Scanner s=new Scanner(System.in);
         int t=Integer.parseInt(br.readLine());
         for(int p=0;p<t;p++){
             String str=br.readLine().trim();
@@ -22,6 +23,7 @@ public class sort17 {
             for(int i=0;i<str1.length;i++){
                 arr1[i]=Integer.parseInt(str1[i]);
             }
+            String comment=s.next();
 
             ///
             mukersh(arr1);
@@ -34,7 +36,7 @@ public class sort17 {
         boolean b=false;
         for(int i=arr.length-1;i>=0;i--){
             for(int j=i-1;j>=0;j--){
-                int k=arr[i]*arr[j];
+                int k=arr[i]*arr[j+1];
                 if(Arrays.binarySearch(arr,k)>=0){
                     b=true;
                     System.out.println(k);
@@ -46,7 +48,7 @@ public class sort17 {
             }
         }
         if(b==false){
-            System.out.println("-1");
+            System.out.println("1");
         }
     }
 
